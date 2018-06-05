@@ -2,92 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link type="text/css" href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" href="css/materialize.css" rel="stylesheet">
-  <link type="text/css" href="css/materialize.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 
 <body>
-  <div class="row">
-    <div class="header">
-      <h1 class="flow-text white-text size float">
-        PORTFOLIO FOR APROSIMOV ANATOLIY.
-      </h1>
-      <a href="index2.html" class="float">
-        <h2 class="flow-text white-text m-l-1">achiviements.</h2>
-        </a>
-        <a href="index1.html" class="float">
-        <h2 class="flow-text white-text m-l-2">original theme.</h2>
-        </a>
-    </div>
-  </div>
-  <div class="slider">
-    <ul class="slides">
-      <li>
-        <img src="img/4.jpg">
-        <div class="caption center-align">
-          <h3>Aprosimov Tolya</h3>
-          <h5 class="light grey-text text-lighten-3">Я люблю острую пищу корейского типа.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="img/4.jpg">
-        <div class="caption left-align">
-          <h3>Aprosimov Tolya</h3>
-          <h5 class="light grey-text text-lighten-3">Я люблю компьютерные игры жанра: Экшен.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="img/4.jpg">
-        <div class="caption right-align">
-          <h3>Aprosimov Tolya</h3>
-          <h5 class="light grey-text text-lighten-3">Я люблю музыку жанра: Pop.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="img/4.jpg">
-        <div class="caption center-align">
-          <h3>Aprosimov Tolya</h3>
-          <h5 class="light grey-text text-lighten-3">Я люблю кататься на коньках</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="row">
-    <h4 class="flow-text white-text">Мое хобби: играть в компьютерные игры. Я люблю есть острые и сладкие пищи, смотря от настроения. Я очень заинтересовался программированием, потому что в будущем я вижу себя дизайнером заказов,к тому же программирование в ближайшем будущем нашей жизни очень продвинется, и зарабатываться будет намного легче. Я скоро хочу научить дополнительные языки программирования, как: ajax, php.</h4>
-  </div>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Портфолио</h5>
-          <p class="grey-text text-lighten-4">by Anatoliy.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Связь</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">+79243600589</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">aprtolya@mail.ru</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">vk.com/quanshen</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container white-text">
-        © 2014 Copyright Text
-      </div>
-    </div>
-  </footer>
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    <script type="text/javascript" src="js/script1.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+        var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
+            preload: preload,
+            create: create,
+            update: update
+        });
 
+        function preload() {
+
+        }
+
+        function create() {
+
+            game.physics.startSystem(Phaser.Physics.ARCADE);
+            game.state.add("lev1", Level1);
+            game.state.add("lev2", Level2);
+            game.state.start("lev1");
+        }
+
+        function update() {
+
+        }
+
+    </script>
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script type="text/javascript" src="js/script.js">
-</script>
 
 </html>
